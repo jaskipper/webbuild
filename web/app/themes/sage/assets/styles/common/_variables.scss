@@ -1,0 +1,23 @@
+// Grid settings
+$enable-flex:           true;
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+//$brand-primary:         #27ae60;
+
+$gray-base: rgb(0, 0, 0);
+$gray-darker: lighten($gray-base, 15%);
+$gray-dark: lighten($gray-base, 30%);
+$gray: lighten($gray-base, 45%);
+$gray-light: lighten($gray-base, 60%);
+$gray-lighter: lighten($gray-base, 80%);
+
+$brand-primary: $gray-light;
+$brand-success: #75D277;
+$brand-info: #289DD2;
+$brand-warning: #FFD97D;
+$brand-danger: #FF9B85;
+
+$btn-success: $brand-success;
+$btn-primary: rgba(1, 17, 27, 0.8);
