@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "74756b7aac2591a3f215c334f8b4107b",
-    "content-hash": "3c5578ff7e549333f00dd98850e7f2ed",
+    "hash": "7d5c4878752ec5fc395279f212b0b5a9",
+    "content-hash": "6b195fe762e93745e49abcee4acf8c08",
     "packages": [
         {
             "name": "composer/installers",
@@ -387,26 +387,6 @@
             "time": "2016-09-01 10:05:43"
         },
         {
-            "name": "wpackagist-plugin/bbpress",
-            "version": "2.5.10",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/bbpress/",
-                "reference": "tags/2.5.10"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/bbpress.2.5.10.zip",
-                "reference": "tags/2.5.10",
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/bbpress/"
-        },
-        {
             "name": "wpackagist-plugin/birds-custom-login",
             "version": "1.0.8",
             "source": {
@@ -425,6 +405,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/birds-custom-login/"
+        },
+        {
+            "name": "wpackagist-plugin/database-sync",
+            "version": "0.5.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/database-sync/",
+                "reference": "tags/0.5.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/database-sync.0.5.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/database-sync/"
         },
         {
             "name": "wpackagist-plugin/hide-admin-bar-from-non-admins",

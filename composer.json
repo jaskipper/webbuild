@@ -51,7 +51,8 @@
     "wpackagist-plugin/pmpro-register-helper": ">=1.3.3",
     "wpackagist-plugin/birds-custom-login": ">=1.0.8",
     "wpackagist-plugin/redirect2homepage": ">=1.0",
-    "wpackagist-plugin/si-contact-form": ">=4.0.44"
+    "wpackagist-plugin/si-contact-form": ">=4.0.44",
+    "wpackagist-plugin/database-sync": ">=0.5.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
