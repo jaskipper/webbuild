@@ -48,6 +48,9 @@ nav {
     background: transparent;
     box-shadow: none;
   }
+  .contact .cd-header {
+    background-color: rgba(1, 17, 27, 0.8);
+  }
 }
 @media only screen and (min-width: 1170px) {
   .cd-header {
@@ -433,10 +436,10 @@ nav {
 }
 #landing:before {
     content: "";
-    background-color: $gray-darker;
+    background-color: #000;
     z-index: 0;
     height: 400px;
-    opacity: 0.7;
+    opacity: 0.5;
     position: fixed;
     @media (max-width: 767px) {
       position: absolute;
@@ -447,7 +450,7 @@ nav {
 }
 #landing {
   padding-top: 64px;
-  background-position: center bottom;
+  background-position: 50% 50% !important;
   background-repeat: no-repeat;
   background-size: cover !important;
   height: 400px;

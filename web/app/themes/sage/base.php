@@ -22,8 +22,8 @@ use Roots\Sage\Wrapper;
     </div>
     <div class="container landingtitle">
       <div class="row flex-items-xs-middle">
-        <div class="col-md-8">
-          <h1 class="entry-title"><?php get_template_part('templates/page-header'); ?>
+        <div class="col-xs-12">
+          <div class="entry-title"><?php get_template_part('templates/page-header'); ?></div>
         </div>
       </div>
     </div>

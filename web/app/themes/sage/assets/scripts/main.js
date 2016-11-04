@@ -21,10 +21,10 @@
         // JavaScript to be fired on all pages
         $(document).ready(function(){
 
+          var topOfOthDiv = 0;
+
           if ($('.subnav').length) {
-              var topOfOthDiv = $(".subnav").offset().top;
-          } else {
-              var topOfOthDiv = 0;
+              topOfOthDiv = $(".subnav").offset().top;
           }
 
           $(window).scroll(function(){
@@ -72,7 +72,9 @@
                 } else {
                   //if scrolling down...
                   $('.cd-header').removeClass('is-visible');
-                  if( currentTop > headerHeight && !$('.cd-header').hasClass('is-fixed')) $('.cd-header').addClass('is-fixed');
+                  if ( currentTop > headerHeight && !$('.cd-header').hasClass('is-fixed') )  {
+                      $('.cd-header').addClass('is-fixed');
+                  }
                 }
                 this.previousTop = currentTop;
             });

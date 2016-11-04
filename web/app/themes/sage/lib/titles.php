@@ -59,3 +59,10 @@ function buttonText() {
       the_field('default_button_text', 'option');
   }
 }
+function h1FontSize() {
+  if ( get_field('h1_font_size') != '' ) {
+    the_field('h1_font_size');
+  } else {
+    the_field('default_h1_font_size');
+  }
+}

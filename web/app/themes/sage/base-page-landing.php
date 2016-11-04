@@ -16,7 +16,7 @@ use Roots\Sage\Wrapper;
     <![endif]-->
     <?php
       do_action('get_header');
-      get_template_part('templates/header');
+      //get_template_part('templates/header');
     ?>
     <div class="container">
       <div class="row">
@@ -41,7 +41,7 @@ use Roots\Sage\Wrapper;
     </div>
     <?php
       do_action('get_footer');
-      get_template_part('templates/footer');
+      //get_template_part('templates/footer');
       wp_footer();
     ?>
   </body>
