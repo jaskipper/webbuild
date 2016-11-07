@@ -5,6 +5,11 @@ footer {
   .navbar-full {
     z-index: 9;
   }
+  .nav-item {
+    a {
+      color: $gray-light;
+    }
+  }
 }
 .bg-inverse {
   background-color: $gray-darker !important;
