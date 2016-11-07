@@ -2,7 +2,10 @@ footer {
   background-color: #fff;
   line-height: 46px;
   font-size: 16px;
+  .navbar-full {
+    z-index: 9;
+  }
 }
 .bg-inverse {
-  background-color: rgba(2, 23, 37, .85) !important;
+  background-color: $gray-darker !important;
 }

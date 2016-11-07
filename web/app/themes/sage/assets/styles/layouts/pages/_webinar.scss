@@ -1,0 +1,86 @@
+.webinar {
+  footer {
+    display: none;
+  }
+  .webinarinvite {
+    text-shadow: 1px 1px 15px rgba(150, 150, 150, 1);
+    margin-top: 60px;
+    text-align: center;
+    h3 {
+      font-family: 'Cabin Condensed', sans-serif;
+      font-size: 2.4rem;
+      color: $gray-darker;
+      @media (min-width: 1200px) {
+        font-size: 3vw;
+      }
+    }
+    h4 {
+      font-family: 'Cabin Condensed', sans-serif;
+      font-size: 2rem;
+      color: $gray-dark;
+      @media (min-width: 1200px) {
+        font-size: 2.8vw;
+      }
+    }
+    h5 {
+      font-family: 'Cabin Condensed', sans-serif;
+      font-size: 1.8rem;
+      color: $gray-darker;
+      padding-top: 15px;
+      @media (min-width: 1200px) {
+        font-size: 2.5vw;
+      }
+    }
+    button {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background-color: #ff7152;
+      -webkit-transition: all .4s; /* Safari */
+      transition: all .6s;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: darken(#ff7152, 10%);
+    }
+    .legal {
+      font-size: .8rem;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .modal {
+    font-size: 85% !important;
+  }
+}
+.webinarback {
+  width: 100%;
+  img {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: -15%;
+    max-height: 110%;
+    @media (max-width: 767px) {
+      position: relative;
+      width: 100%;
+      max-height: none;
+      right: auto;
+      left: -12%;
+    }
+    @media (max-width: 940px) and (min-width: 768px) {
+      right: -25%;
+    }
+    @media (min-width: 1200px) {
+      right: -5%;
+    }
+  }
+}
+.btn-xlg {
+  padding: 1rem 1.75rem;
+  font-size: 1.5rem;
+  border-radius: .3rem
+}
+.modal-backdrop.in {
+  opacity: .8;
+}

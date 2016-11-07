@@ -54,7 +54,7 @@ function my_template_redirect()
 {
   if ( is_user_logged_in() ) {
     the_content();
-  } else if ( !is_user_logged_in() && is_page( array( 'join', 'landing', 'membership-checkout', 'membership-invoice', 'membership-confirmation' )  ) ) {
+  } else if ( !is_user_logged_in() && is_page( array( 'register', 'membership-checkout', 'membership-invoice', 'membership-confirmation', 'webinar' )  ) ) {
     the_content();
   } else {
     header('Location: ' . wp_login_url());
@@ -75,3 +75,48 @@ function getItems($location, $default = null)
 
     return $default;
 }
+
+//Add Logged OUT Body class
+
+add_filter('body_class','my_class_names');
+function my_class_names($classes) {
+    if (! ( is_user_logged_in() ) ) {
+        $classes[] = 'logged-out';
+    }
+    return $classes;
+}
+
+/**
+ * Link Modals
+ */
+
+function modals() {
+  $pages = array ('Have a Question?', 'Privacy Policy', 'Terms and Conditions', 'Disclaimer');
+  for ($i = 0; $i <= 3; $i++) {
+    $supportData = get_page_by_title( $pages[$i] );
+    if ($supportData->post_title == "Have a Question?") {
+     $content = do_shortcode('[si-contact-form form="1"]');
+    } else {
+     $content = $supportData->post_content;
+    }
+    echo '
+     <div class="modal fade" id="modal'.$i.'" tabindex="-1" role="dialog" aria-labelledby="modalLabel'.$i.'" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+             <h4 class="modal-title" id="myModalLabel">'.$supportData->post_title.'</h4>
+           </div>
+           <div class="modal-body">'.
+               $content
+           .'</div>
+           <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+           </div>
+         </div>
+       </div>
+     </div>';
+  }
+} // Modals

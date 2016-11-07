@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9f48348cbb1e6979db89a3ccd6dd9457",
-    "content-hash": "b0b297a7973ecd18395b4a426864dfbb",
+    "hash": "4a8a136ad32b2cc8388a1cd411086694",
+    "content-hash": "92f758f0d9ae225cde47dee6a2b448d8",
     "packages": [
         {
             "name": "composer/installers",
@@ -587,6 +587,26 @@
             "homepage": "https://wordpress.org/plugins/pmpro-register-helper/"
         },
         {
+            "name": "wpackagist-plugin/raw-html",
+            "version": "1.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/raw-html/",
+                "reference": "tags/1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/raw-html.1.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/raw-html/"
+        },
+        {
             "name": "wpackagist-plugin/redirect2homepage",
             "version": "1.0",
             "source": {
@@ -645,6 +665,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/video-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/wc-shortcodes",
+            "version": "2.05",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wc-shortcodes/",
+                "reference": "tags/2.05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wc-shortcodes.2.05.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wc-shortcodes/"
         },
         {
             "name": "wpackagist-plugin/wp-bouncer",

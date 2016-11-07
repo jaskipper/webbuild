@@ -7,18 +7,24 @@
           Copyright &copy; <?php echo date("Y") ?> - <a href="https://skipperinnovations.com">Skipper Innovations</a>
         </div>
         <div class="col-md-6">
-          <?php $items = getItems('footer_navigation', array()); ?>
             <ul class="nav navbar-nav pull-md-right footernav">
-              <?php foreach ($items as $item): ?>
                   <li class="nav-item">
-                    <a class="nav-item <?php echo implode(' ', $item->classes); ?>" href="<?php echo $item->url; ?>">
-                        <?php echo $item->title; ?>
-                    </a>
+                    <a href="#" data-toggle="modal" data-target="#modal0">Support</a>
                   </li>
-              <?php endforeach; ?>
+                  <li class="nav-item">
+                    <a href="#" data-toggle="modal" data-target="#modal1">Privacy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" data-toggle="modal" data-target="#modal2">Terms</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" data-toggle="modal" data-target="#modal3">Disclaimer</a>
+                  </li>
             </ul>
         </div>
       </div>
     </div>
   </nav>
 </footer>
+
+<?php modals(); ?>
