@@ -212,4 +212,14 @@ main.main {
   .wc-shortcodes-accordion-content {
     border-bottom: 1px solid $gray-lighter !important;
   }
+  .nav-below {
+    display: none;
+  }
+}
+.membership-checkout {
+  #pmpro_user_fields {
+    .pmpro_thead-msg {
+      display: none;
+    }
+  }
 }
