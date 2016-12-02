@@ -12,5 +12,6 @@ footer {
   }
 }
 .bg-inverse {
-  background-color: $gray-darker !important;
+  background-color: $bgcolor !important;
+  color: rgba(255, 255, 255, 0.5);
 }

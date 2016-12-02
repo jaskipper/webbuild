@@ -2,12 +2,12 @@
   <?php //dynamic_sidebar('sidebar-footer'); ?>
   <nav class="navbar navbar-dark navbar-full bg-inverse">
     <div class="container">
-      <div class="row">
+      <div class="row flex-items-sm-between">
         <div id="copyright" class="col-md-6">
           Copyright &copy; <?php echo date("Y") ?> - <a href="https://skipperinnovations.com">Skipper Innovations</a>
         </div>
         <div class="col-md-6">
-            <ul class="nav navbar-nav pull-md-right footernav">
+            <ul class="nav navbar-nav float-md-right footernav">
                   <li class="nav-item">
                     <a href="#" data-toggle="modal" data-target="#modal0">Support</a>
                   </li>

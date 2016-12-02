@@ -126,7 +126,7 @@ function modals() {
  */
 
 function wp_add_skip_scripts() {
-  wp_enqueue_style( 'wp-google-fonts', 'https://fonts.googleapis.com/css?family=Cabin+Condensed|Cabin:400,700|Roboto:400,400i,700', false );
+  wp_enqueue_style( 'wp-google-fonts', 'https://fonts.googleapis.com/css?family=PT+Sans+Narrow|PT+Sans:400,700', false );
   wp_enqueue_style( 'wp-font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', false );
 }
 add_action( 'wp_enqueue_scripts', 'wp_add_skip_scripts' );
