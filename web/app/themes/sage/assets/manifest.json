@@ -22,6 +22,6 @@
     }
   },
   "config": {
-    "devUrl": "http://webbuild.dev"
+    "devUrl": "https://webbuild.dev"
   }
 }

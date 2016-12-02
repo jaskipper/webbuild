@@ -1,5 +1,5 @@
 <header class="cd-header">
-	<div class="cd-logo"><a href="/"><img src="<?php the_field('logo', 'option'); ?>" /></a></div>
+	<div class="cd-logo"><a href="/"><img class="hvr-grow" src="<?php the_field('logo', 'option'); ?>" /></a></div>
 	<nav>
 		<ul class="cd-secondary-nav">
 			<?php if ( !is_user_logged_in() ) { ?>

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4a8a136ad32b2cc8388a1cd411086694",
-    "content-hash": "92f758f0d9ae225cde47dee6a2b448d8",
+    "hash": "f47b15b71ee80ef58b816d9d6402187d",
+    "content-hash": "19005d677bf28b0ea66ae350642a7a0d",
     "packages": [
         {
             "name": "composer/installers",
@@ -488,16 +488,16 @@
         },
         {
             "name": "wpackagist-plugin/paid-memberships-pro",
-            "version": "1.8.11.2",
+            "version": "1.8.12",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/paid-memberships-pro/",
-                "reference": "tags/1.8.11.2"
+                "reference": "tags/1.8.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/paid-memberships-pro.1.8.11.2.zip",
-                "reference": "tags/1.8.11.2",
+                "url": "https://downloads.wordpress.org/plugin/paid-memberships-pro.1.8.12.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -505,26 +505,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/paid-memberships-pro/"
-        },
-        {
-            "name": "wpackagist-plugin/pmpro-bbpress",
-            "version": "1.5",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/pmpro-bbpress/",
-                "reference": "tags/1.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/pmpro-bbpress.1.5.zip",
-                "reference": "tags/1.5",
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/pmpro-bbpress/"
         },
         {
             "name": "wpackagist-plugin/pmpro-email-templates-addon",
@@ -568,16 +548,16 @@
         },
         {
             "name": "wpackagist-plugin/pmpro-register-helper",
-            "version": "1.3.3",
+            "version": "1.3.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/pmpro-register-helper/",
-                "reference": "tags/1.3.3"
+                "reference": "tags/1.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/pmpro-register-helper.1.3.3.zip",
-                "reference": "tags/1.3.3",
+                "url": "https://downloads.wordpress.org/plugin/pmpro-register-helper.1.3.4.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -665,26 +645,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/video-thumbnails/"
-        },
-        {
-            "name": "wpackagist-plugin/wc-shortcodes",
-            "version": "2.05",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wc-shortcodes/",
-                "reference": "tags/2.05"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wc-shortcodes.2.05.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wc-shortcodes/"
         },
         {
             "name": "wpackagist-plugin/wp-bouncer",

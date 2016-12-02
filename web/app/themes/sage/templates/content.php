@@ -3,20 +3,19 @@
     <div class="container">
       <div class="row flex-items-xs-middle">
         <div class="col-md-5 thumbwrapper">
-          <div class="skipthumb">
-            <a href="<?php the_permalink(); ?>">
-              <?php
-                if ( has_post_thumbnail() )
-                {
-                    the_post_thumbnail( 'medium_large' );
-                }
-                else
-                {
-              ?>
-                <img src="<?php the_field('default_thumbnail','option') ?>" alt="<?php the_title(); ?>" />
-              <?php } ?>
-            </a>
-          </div>
+          <a href="<?php the_permalink(); ?>">
+            <?php
+              if ( has_post_thumbnail() ) {
+                $thumb_id = get_post_thumbnail_id();
+                $thumb_url = wp_get_attachment_image_src($thumb_id,'medium_large', true);
+                $thumb_url = $thumb_url[0];
+              } else {
+                $thumb_url = get_field('default_thumbnail','option');
+              }
+            ?>
+            <div class="skipthumb" style="background-image: url('<?php echo $thumb_url ?>')">
+            </div>
+          </a>
         </div>
         <div class="col-md-7 ">
           <header>

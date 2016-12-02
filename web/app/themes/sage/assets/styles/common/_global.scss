@@ -29,6 +29,31 @@ a:hover {
   color: darken($brand-success, 10%);
   text-decoration: none;
 }
+.skiplinks {
+  margin-left: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  @media screen and (max-width: 450px) {
+    display: block;
+    margin-left: 0;
+    padding-top: 10px;
+  }
+}
+.bottomlinks {
+  border-top: 2px solid #ddd;
+  padding-top: 5px;
+  margin-top: 40px;
+  .linksprev {
+  }
+  .linkseparator {
+    display: none;
+  }
+  .linknext {
+    float: right;
+  }
+}
 .spacer {
   margin-top: 40px;
 }
@@ -40,7 +65,10 @@ a:hover {
   width: 320px;
 }
 main.main {
-  flex: 0 0 80%;
+  @media (min-width: 992px) {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
 }
 
 #mycontent {
@@ -56,12 +84,15 @@ main.main {
   padding-top: 3px;
   padding-right: 8px;
 }
-.single #mycontent, .page #mycontent {
+#mycontent {
   a {
     color: $brand-info;
   }
   a:hover {
     color: darken($brand-info, 10%);
+  }
+  a.btn {
+    color: #ffffff;
   }
 }
 .wrap-wrap {
@@ -70,29 +101,13 @@ main.main {
   position: relative;
   z-index: 2;
 }
-.subnav {
-  height: 72px;
-  position: relative;
-  top: 0;
-  left: 0;
-  transition: all ease-in-out .15s;
-  width: 100%;
-  z-index: 10
-}
-.subnav-inner {
-  background-color: #fff;
-  border-bottom: 1px solid $gray-lighter;
-  height: 72px;
-  line-height: 36px;
-  padding: 16px 0;
-}
 .content {
   padding-top: 40px;
 }
 .videoWrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
+	//padding-top: 25px;
 	height: 0;
   margin-bottom: 40px;
 }
@@ -111,32 +126,8 @@ main.main {
   width: 100%;
   overflow: hidden;
   height: 200px;
-  img {
-    width: auto;
-    height: 100%;
-  }
-}
-/* Grow */
-.hvr-grow, .hvr-growsm {
-    display: inline-block;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.6s;
-    transition-property: transform;
-}
-.hvr-growsm:hover,
-.hvr-growsm:focus,
-.hvr-growsm:active {
-    transform: scale(1.02);
-}
-
-.hvr-grow:hover,
-.hvr-grow:focus,
-.hvr-grow:active {
-    transform: scale(1.1);
+  background-size: cover;
+  background-position: center center;
 }
 #pmpro_levels_table {
   width: 100%;

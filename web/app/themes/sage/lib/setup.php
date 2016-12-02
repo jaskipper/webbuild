@@ -31,6 +31,8 @@ function setup() {
     'footer_navigation' => __('Footer Navigation', 'sage')
   ]);
 
+  add_theme_support('soil-google-analytics', 'UA-71298311-3');
+
   // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
