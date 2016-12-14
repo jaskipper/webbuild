@@ -68,54 +68,58 @@ function h1FontSize() {
 }
 function categoryNavLinks() {
 
-  if ( in_category( array('Module 1','Module 2','Module 3','Module 4','Module 5','Tools and Resources') ) ) {
+  if ( in_category( array('Module 1','Module 2','Module 3','Module 4','Module 5', 8) ) ) {
     $next = get_next_post_link('%link', 'Next Lesson »', TRUE);
     $previous = get_previous_post_link('%link', '« Previous Lesson', TRUE);
 
     $categories = get_the_category();
     $position = $categories[0]->term_id;
-    $next_cat = $position + 1;
-    $prev_cat = $position - 1;
+    $module5 = 11;
+    $module4 = 6;
+    $module3 = 5;
+    $module2 = 4;
+    $module1 = 3;
+    $resources = 8;
 
     $separator = ' | ';
+    if ( !is_archive() ) {
+      if ( $next == "" || $previous == "" ) {
+        $separator = "";
+      }
+    }
 
     $post = get_post();
     echo $post->current_post;
 
     if ( is_archive() ) { //If This is an Archive Give it Module Links
 
-      if ( $position > 3 ) {
-        $previous = "<a href='" . get_category_link( $prev_cat ) . "'>« " . get_cat_name( $prev_cat ) . "</a>";
-      } else {
+      if ( $position == $module1 ) {
         $previous = '<a href="/">« Home</a>'; //If we are at the beginning Give a Home Link
+        $next = "<a href='" . get_category_link( $module2 ) . "'>" . get_cat_name( $module2 ) . " »</a>";
       }
-
-      if ($position < 8) {
-        $next = "<a href='" . get_category_link( $next_cat ) . "'>" . get_cat_name( $next_cat ) . " »</a>";
-      } else {
-        $next = '<a href="/">« Home</a>'; //If we're at the End give it a Home Link
+      if ( $position == $module2 ) {
+        $previous = "<a href='" . get_category_link( $module1 ) . "'>« " . get_cat_name( $module1 ) . "</a>";
+        $next = "<a href='" . get_category_link( $module3 ) . "'>" . get_cat_name( $module3 ) . " »</a>";
       }
-
-    } else if ( $previous == '') {
-      if ($position > 3) { //Give back to modules link
-        $previous = '';
-        $separator = '';
-      } else {
-        $previous = '';
-        $separator = '';
+      if ( $position == $module3 ) {
+        $previous = "<a href='" . get_category_link( $module2 ) . "'>« " . get_cat_name( $module2 ) . "</a>";
+        $next = "<a href='" . get_category_link( $module4 ) . "'>" . get_cat_name( $module4 ) . " »</a>";
       }
-    } else if ($next == '') {
-      if ($position < 8) {
-        $next = "<a href='" . get_category_link( $next_cat ) . "'>" . get_cat_name( $next_cat ) . " »</a>";
-      } else {
-        $next = '';
-        $separator = '';
+      if ( $position == $module4 ) {
+        $previous = "<a href='" . get_category_link( $module3 ) . "'>« " . get_cat_name( $module3 ) . "</a>";
+        $next = "<a href='" . get_category_link( $module5 ) . "'>" . get_cat_name( $module5 ) . " »</a>";
       }
-    }
-    if ( $previous == '' or $next == '') {
-      $separator = '';
+      if ( $position == $module5 ) {
+        $previous = "<a href='" . get_category_link( $module4 ) . "'>« " . get_cat_name( $module4 ) . "</a>";
+        $next = "<a href='" . get_category_link( $resources ) . "'>" . get_cat_name( $resources ) . " »</a>";
+      }
+      if ( $position == $resources ) {
+        $previous = "<a href='" . get_category_link( $module5 ) . "'>« " . get_cat_name( $module5 ) . "</a>";
+        $next = '<a href="/">Home »</a>';;
+      }
     }
 
     echo "<span class='linkprev'>" . $previous . "</span><span class='linkseparator'>" . $separator . "</span><span class='linknext'>" . $next . "</span>";
+
   }
 }
