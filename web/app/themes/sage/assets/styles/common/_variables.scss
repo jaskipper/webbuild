@@ -17,10 +17,17 @@ $gray-lighter: #B1B1B1;
 $gray-lightest: #EAEAEA;
 
 $brand-primary: $gray-light;
-$brand-success: #75D277;
-$brand-info: #289DD2;
+//$brand-success: #75D277;
+$brand-success: #48c08c;
+$brand-successly: $brand-success;
+//$brand-success: #50A6A5;
+//$brand-success-2: #50A6A5;
+//$brand-info: #289DD2;
+$brand-info: #069fc0;
+//$brand-info: #276673;
 $brand-warning: #FFD97D;
 $brand-danger: #FF9B85;
 
 $btn-success: $brand-success;
-$btn-primary: rgba(1, 17, 27, 0.8);
+$btn-primary: $brand-primary;
+//$btn-primary: $brand-info;

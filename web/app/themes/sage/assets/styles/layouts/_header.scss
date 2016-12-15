@@ -289,9 +289,9 @@ nav {
   display: inline-block;
   padding: .4em 1em;
   border-radius: 0.25em;
-  -webkit-transition: background 0.2s;
-  -moz-transition: background 0.2s;
-  transition: background 0.2s;
+  -webkit-transition: background 0.6s;
+  -moz-transition: background 0.6s;
+  transition: background 0.6s;
 }
 .no-touch .cd-primary-nav a:hover {
   background-color: #e36767;
@@ -412,6 +412,12 @@ nav {
   .menu-linkedin a:before {
     content: '\f0e1';
   }
+  .cd-label {
+    a {
+      font-weight: bold;
+      border-bottom: 2px solid;
+    }
+  }
   .skipperfa {
     overflow: hidden;
     width: 2rem;
@@ -439,7 +445,7 @@ nav {
     background-color: #000;
     z-index: 0;
     height: 400px;
-    opacity: 0.7;
+    opacity: 0.6;
     position: fixed;
     @media (max-width: 767px) {
       position: absolute;

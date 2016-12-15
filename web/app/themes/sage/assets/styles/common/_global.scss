@@ -14,18 +14,29 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 h1 {
   font-size: 36px;
 }
+code {
+  color: #B96A34;
+}
 h2, .h2 {
   font-size: 2rem;
   border-bottom: 2px solid $gray-lighter;
   margin-bottom: 20px;
   padding-top: 10px;
   color: $gray-darker;
+  a {
+    color: $gray-dark;
+  }
+  a:hover {
+    color: darken($gray-dark, 10%);
+  }
 }
 h3, .h3 {
   font-size: 1.5rem;
 }
 a {
   color: $brand-success;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 a:hover {
   color: darken($brand-success, 10%);
@@ -35,7 +46,7 @@ a:hover {
   margin-left: 20px;
   font-size: 14px;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: bold;
   color: #fff;
   @media screen and (max-width: 450px) {
     display: block;
@@ -44,9 +55,15 @@ a:hover {
   }
 }
 .bottomlinks {
-  border-top: 2px solid #ddd;
+  border-top: 2px solid $gray-light;
   padding-top: 5px;
   margin-top: 40px;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  a {
+    color: $brand-success;
+  }
   .linksprev {
   }
   .linkseparator {
@@ -56,11 +73,22 @@ a:hover {
     float: right;
   }
 }
+.titleinfo {
+  color: $gray;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 .spacer {
   margin-top: 40px;
 }
 .btn-success:hover {
   background-color: darken($brand-success, 10%);
+}
+.btn {
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  border-width: 0;
 }
 #login h1 a, .login h1 a {
   background-size: 320px;
@@ -88,13 +116,13 @@ main.main {
 }
 #mycontent {
   a {
-    color: $brand-info;
+    //color: $brand-successly;
   }
   a:hover {
-    color: darken($brand-info, 10%);
+    //color: darken($brand-successly, 10%);
   }
   a.btn {
-    color: #ffffff;
+    //color: #ffffff;
   }
 }
 .wrap-wrap {
@@ -140,11 +168,12 @@ main.main {
   }
 }
 .btn-primary {
-  background-color: $btn-primary;
+  background-color: $btn-success;
 }
 .btn-primary:hover {
-  background-color: darken($btn-primary, 10%);
+  background-color: darken($btn-success, 10%);
 }
+
 //Forms
 .contact {
   background-color: $gray-darker;

@@ -23,7 +23,7 @@ function shortcode_fp_cat_list( $atts ){
       $category_first_post = new WP_Query( array(
         'cat' => $category->cat_ID,
         'post_count' => 1,
-        'order' => 'ASC'
+        'order' => 'DESC'
       ));
 
       // The Loop
