@@ -284,6 +284,7 @@ nav {
   -moz-osx-font-smoothing: grayscale;
   margin: .2em 0;
   text-transform: capitalize;
+  list-style: none;
 }
 .cd-primary-nav a {
   display: inline-block;
@@ -427,6 +428,9 @@ nav {
     margin: 1.5rem;
     a {
       padding: 0;
+    }
+    @media screen and (max-width: 480px) {
+        margin: 1rem;
     }
   }
 }

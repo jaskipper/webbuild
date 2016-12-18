@@ -99,6 +99,10 @@
 
           $('.fscf-button-submit').addClass('btn btn-success hvr-grow');
 
+          if ($(document.body).height() < $(window).height()) {
+            $('.main-footer').attr('style', 'position: fixed!important; bottom: 0px; width: 100%;');
+          }
+
 
         });
       },

@@ -11,14 +11,18 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: bold;
   color: $gray-dark;
 }
+h4, h5, h6, .h4, .h5, .h6 {
+  color: $gray;
+}
 h1 {
-  font-size: 36px;
+  @media screen and (max-width: 576px) {
+    font-size: 24px !important;
+  }
 }
 code {
   color: #B96A34;
 }
 h2, .h2 {
-  font-size: 2rem;
   border-bottom: 2px solid $gray-lighter;
   margin-bottom: 20px;
   padding-top: 10px;
@@ -30,9 +34,7 @@ h2, .h2 {
     color: darken($gray-dark, 10%);
   }
 }
-h3, .h3 {
-  font-size: 1.5rem;
-}
+
 a {
   color: $brand-success;
   -webkit-transition: all .6s;
