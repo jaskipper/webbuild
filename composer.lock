@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e006f6b4c67d249df3ded0524d7cbdcf",
     "content-hash": "e127d94d64940b3c585ddad8ffeb60ab",
     "packages": [
         {
@@ -105,7 +104,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-04-13 19:46:30"
+            "time": "2016-04-13T19:46:30+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -142,7 +141,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2016-12-06 18:46:46"
+            "time": "2016-12-06T18:46:46+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -190,7 +189,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2015-06-11 15:15:30"
+            "time": "2015-06-11T15:15:30+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -232,7 +231,7 @@
             "keywords": [
                 "env"
             ],
-            "time": "2016-05-08 17:14:32"
+            "time": "2016-05-08T17:14:32+00:00"
         },
         {
             "name": "roots/soil",
@@ -277,7 +276,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2016-08-30 18:15:45"
+            "time": "2016-08-30T18:15:45+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -334,7 +333,7 @@
             "keywords": [
                 "wordpress wp bcrypt password"
             ],
-            "time": "2016-03-01 16:27:06"
+            "time": "2016-03-01T16:27:06+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -384,7 +383,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-09-01 10:05:43"
+            "time": "2016-09-01T10:05:43+00:00"
         },
         {
             "name": "wpackagist-plugin/birds-custom-login",
@@ -428,15 +427,15 @@
         },
         {
             "name": "wpackagist-plugin/ewww-image-optimizer",
-            "version": "3.1.3",
+            "version": "3.2.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/ewww-image-optimizer/",
-                "reference": "tags/3.1.3"
+                "reference": "tags/3.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/ewww-image-optimizer.3.1.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/ewww-image-optimizer.3.2.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -488,15 +487,15 @@
         },
         {
             "name": "wpackagist-plugin/paid-memberships-pro",
-            "version": "1.8.13",
+            "version": "1.8.13.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/paid-memberships-pro/",
-                "reference": "tags/1.8.13"
+                "reference": "tags/1.8.13.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/paid-memberships-pro.1.8.13.zip",
+                "url": "https://downloads.wordpress.org/plugin/paid-memberships-pro.1.8.13.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -508,7 +507,7 @@
         },
         {
             "name": "wpackagist-plugin/pmpro-email-templates-addon",
-            "version": "0.7",
+            "version": "0.7.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/pmpro-email-templates-addon/",
@@ -628,7 +627,7 @@
         },
         {
             "name": "wpackagist-plugin/si-contact-form",
-            "version": "4.0.44",
+            "version": "4.0.45",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/si-contact-form/",
@@ -764,7 +763,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2016-11-30 04:02:31"
+            "time": "2016-11-30T04:02:31+00:00"
         }
     ],
     "aliases": [],
