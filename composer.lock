@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e127d94d64940b3c585ddad8ffeb60ab",
+    "content-hash": "b062dbb4a5c061fa1601c63e9853bb3e",
     "packages": [
         {
             "name": "composer/installers",
@@ -466,6 +466,26 @@
             "homepage": "https://wordpress.org/plugins/hide-admin-bar-from-non-admins/"
         },
         {
+            "name": "wpackagist-plugin/ninja-forms",
+            "version": "3.0.20",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/ninja-forms/",
+                "reference": "tags/3.0.20"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/ninja-forms.3.0.20.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/ninja-forms/"
+        },
+        {
             "name": "wpackagist-plugin/page-scroll-to-id",
             "version": "1.6.1",
             "source": {
@@ -626,16 +646,16 @@
             "homepage": "https://wordpress.org/plugins/safe-svg/"
         },
         {
-            "name": "wpackagist-plugin/si-contact-form",
-            "version": "4.0.45",
+            "name": "wpackagist-plugin/sendgrid-email-delivery-simplified",
+            "version": "1.10.3",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/si-contact-form/",
+                "url": "https://plugins.svn.wordpress.org/sendgrid-email-delivery-simplified/",
                 "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/si-contact-form.zip",
+                "url": "https://downloads.wordpress.org/plugin/sendgrid-email-delivery-simplified.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -643,7 +663,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/si-contact-form/"
+            "homepage": "https://wordpress.org/plugins/sendgrid-email-delivery-simplified/"
         },
         {
             "name": "wpackagist-plugin/video-thumbnails",
