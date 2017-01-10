@@ -46,7 +46,7 @@ use Roots\Sage\Wrapper;
         </div>
 
         <div class="webinarback">
-          <img src="<?php get_template_directory_uri() ?>/dist/images/JasonWhtPicSm.jpg">
+          <img src="<?php echo get_template_directory_uri() ?>/dist/images/JasonWhtPicSm.jpg">
         </div>
 
     <?php
