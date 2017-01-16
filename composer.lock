@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "efffe7323bcdab3e46248010be696430",
+    "content-hash": "63038f27b5b22f004c55a4d450c533ca",
     "packages": [
         {
             "name": "composer/installers",
@@ -467,15 +467,15 @@
         },
         {
             "name": "wpackagist-plugin/ninja-forms",
-            "version": "3.0.22",
+            "version": "3.0.24",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/ninja-forms/",
-                "reference": "tags/3.0.22"
+                "reference": "tags/3.0.24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/ninja-forms.3.0.22.zip",
+                "url": "https://downloads.wordpress.org/plugin/ninja-forms.3.0.24.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -684,6 +684,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/video-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/wonderm00ns-simple-facebook-open-graph-tags",
+            "version": "2.0.6.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wonderm00ns-simple-facebook-open-graph-tags/",
+                "reference": "tags/2.0.6.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wonderm00ns-simple-facebook-open-graph-tags.2.0.6.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wonderm00ns-simple-facebook-open-graph-tags/"
         },
         {
             "name": "wpackagist-plugin/wp-bouncer",
