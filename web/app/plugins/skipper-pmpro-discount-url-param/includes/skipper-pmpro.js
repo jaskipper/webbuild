@@ -69,10 +69,14 @@ jQuery(function($) {
 
               // Get the URL Parameter disc
               var disc = urlParam('disc');
-              //console.log(disc);
+              console.log(disc);
 
               // Set the Expires time to 4 hours ahead
-              var cookieDate = moment().add(4, 'hours');
+              if ( disc == "7EE5764A5E" ) {
+                var cookieDate = moment().add(48, 'hours');
+              } else {
+                var cookieDate = moment().add(4, 'hours');
+              }
               var cookieDateUTC = cookieDate.toDate().toUTCString();
               var cookieDateISO = cookieDate.toISOString();
               //console.log(cookieDate);

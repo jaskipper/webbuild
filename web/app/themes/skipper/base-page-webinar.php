@@ -44,7 +44,19 @@ use Roots\Sage\Wrapper;
               <h3>FREE TRAINING SESSION:</h3>
           		<h4>The Ultimate Church Web Strategy Webinar. "How To Build an Effective Online Presence... Without Breaking The Budget!”</h4>
           		<h5>Next Class: <span style="color:#d31717">TODAY</span></h5>
-          		<p><a style="cursor: pointer;"><button id="reserve" type="button" class="btn btn-danger btn-xlg">Reserve My Seat</button></a></p>
+          		<p>
+                <link href="//app.webinarjam.net/assets/css/register_button.css" rel="stylesheet">
+                <div style="margin:auto;width:300px;">
+                  <div class="embedded-joinwebinar-button">
+                    <button id="reserve" type="button" class="btn btn-danger btn-xlg" title="regpopbox_32182_a76877bf39">
+                      <span>Reserve My Seat</span>
+                    </button>
+                  </div>
+                </div>
+                <script src="//app.webinarjam.net/assets/js/porthole.min.js" language="javascript" type="text/javascript" async></script>
+                <script src="//app.webinarjam.net/register.evergreen.extra.js" language="javascript" type="text/javascript" async></script>
+              </p>
+
               <div class="fb-like" data-href="https://www.facebook.com/jasonaskipper1" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
           		<div class="legal">
                 <p>Your Information is 100% Secure and Will Never Be Shared With Anyone</p>
