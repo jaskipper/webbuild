@@ -7,32 +7,9 @@ function urlParam(name){
     else {
        return results[1] || 0;
     }
-};
-// Get the cookie
-function getCookie(cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-//Check to see if a cookie exists
-function checkCookie(cname) {
-    var name = getCookie(cname);
-    if (name != "") {
-      return name;
-    }
-    return "";
 }
 // Remove the parameter from the URL
-function removeParam(parameter) {
+function removeUrlParam(parameter) {
     var url=document.location.href;
     var urlparts= url.split('?');
 
@@ -50,58 +27,117 @@ function removeParam(parameter) {
     }
     return url;
 }
-
-function set_cookie(name, value, expires) {
-  document.cookie = name +'='+ value +'; expires=' + expires + '; Path=/;';
-  //console.log(name +'='+ value +'; expires=' + expires + '; Path=/;');
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
 }
-function delete_cookie(name) {
-  document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+jQuery('.cleardiscount').click(function() {
+    delete_cookie('discount');
+    delete_cookie('discountexpires');
+    location.reload();
+});
+
+function showDiscountCodeItems() {
+  if (jQuery('body').is('.membership-checkout, .pmpro-level')) {
+
+    if ( Cookies.get('discount') ) {
+      jQuery('#pmpro_message').addClass('replace-pmpro-message');
+
+      // If this was successful, let's add our own message to #pmpro_message
+      jQuery('#pmpro_message').addClass('replace-pmpro-message');
+
+      // Replacing the default message with one explaining how long we have left
+      jQuery('head').append("<style>.replace-pmpro-message:after{ content:'Your discount has been applied! - NOTE! This Offer Expires In:' }</style>");
+
+      // Clearing and Hiding the Discount Code Fields
+      jQuery('#pmpro_level_cost p:first-of-type, #other_discount_code_p, .pmpro_payment-discount-code').hide();
+
+      // Add a clear button after
+      jQuery("#pmpro_level_cost").after('<button type="button" class="btn btn-primary cleardiscount">Clear Discount</button>');
+
+      jQuery('.cleardiscount').click(function() {
+          Cookies.remove('discount');
+          Cookies.remove('discountexpires');
+          location.reload();
+      });
+      jQuery("#clockdiv").show();
+
+      //var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+      var deadline = new Date( Date.parse( Cookies.get( 'discountexpires' ) ) );
+      initializeClock('clockdiv', deadline);
+
+    }
+    
+  }
+}
+
+function showDiscountCodeFailed() {
+  jQuery('#pmpro_message').removeClass('replace-pmpro-message');
+  console.log('Discount Code Check Failed');
+  Cookies.remove('discount');
+  Cookies.remove('discountexpires');
+  jQuery("#clockdiv").hide();
 }
 
 jQuery(function($) {
-  $( document ).ready(function() {
 
-      if ($('body').is('.membership-checkout, .pmpro-level')){
+  $(document).ready(function(){
 
-          // Check URL for the disc Parameter
-          if ( urlParam('disc') ) {
+    if ($('body').is('.membership-checkout, .pmpro-level')) {
+      if ( urlParam('disc') ) {
+        // Get the URL Parameter disc
+        var disc = urlParam('disc');
+        removeUrlParam('disc');
+        var inFourHours = new Date(Date.now() + 60 * 60 * 1000 * 4);
+        var inTwoDays = new Date(Date.now() + 60 * 60 * 1000 * 24 * 2);
+        if ( disc === "7EE5764A5E" ) {
+          // Requires the js-cookie plugin
+          Cookies.set('discount', disc, { expires: inTwoDays });
+          Cookies.set('discountexpires', inTwoDays, { expires: inTwoDays });
+        } else {
+          Cookies.set('discount', disc, { expires: inFourHours });
+          Cookies.set('discountexpires', inFourHours, { expires: inFourHours });
+        }
+      }
+      if ( Cookies.get('discount') ) {
+          var discount = Cookies.get('discount');
+          $('#other_discount_code').val( discount );
+          $('#other_discount_code_button').click();
+      }
+    }
 
-              // Get the URL Parameter disc
-              var disc = urlParam('disc');
-              console.log(disc);
+  });
 
-              // Set the Expires time to 4 hours ahead
-              if ( disc == "7EE5764A5E" ) {
-                var cookieDate = moment().add(48, 'hours');
-              } else {
-                var cookieDate = moment().add(4, 'hours');
-              }
-              var cookieDateUTC = cookieDate.toDate().toUTCString();
-              var cookieDateISO = cookieDate.toISOString();
-              //console.log(cookieDate);
-
-              // Set the new cookies
-              delete_cookie('discount');
-              delete_cookie('discountexpires');
-              set_cookie('discount', disc, cookieDateUTC);
-              set_cookie('discountexpires', cookieDateISO, cookieDateUTC);
-
-              // Remove the URL Parameter
-              removeParam('disc');
-
-          }
-
-          //console.log(document.cookie);
-          if ( checkCookie('discount') && $('#other_discount_code').val() == "" ) {
-              var discount = checkCookie('discount');
-              $('#other_discount_code').val( discount );
-              $('#other_discount_code_button').click();
-          }
-
-      } // pmpro pages
-      //console.log('working');
-
-    }); // Document Ready
-
-}); // jQuery
+});

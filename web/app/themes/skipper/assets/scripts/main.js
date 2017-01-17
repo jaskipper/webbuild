@@ -18,7 +18,9 @@
     // All pages
     'common': {
       init: function() {
+
         // JavaScript to be fired on all pages
+
         $(document).ready(function(){
 
           var topOfOthDiv = 0;
@@ -102,7 +104,6 @@
           if ($(document.body).height() < $(window).height()) {
             $('.main-footer').attr('style', 'position: fixed!important; bottom: 0px; width: 100%;');
           }
-
 
         });
       },
