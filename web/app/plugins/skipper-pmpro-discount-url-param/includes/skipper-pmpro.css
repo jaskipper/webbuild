@@ -63,3 +63,9 @@
 	padding-top: 5px;
 	font-size: 16px;
 }
+.btn.cleardiscount {
+  background-color: #666;
+}
+.btn.cleardiscount:hover {
+  background-color: #555;
+}
