@@ -78,7 +78,7 @@ function showDiscountCodeItems() {
       jQuery('#pmpro_message').addClass('replace-pmpro-message');
 
       // Replacing the default message with one explaining how long we have left
-      jQuery('head').append("<style>.replace-pmpro-message:after{ content:'Your discount has been applied! - NOTE! This Offer Expires In:' }</style>");
+      jQuery('head').append("<style>.replace-pmpro-message:after{ content:'Your discount has been applied! - NOTE: This Offer Expires In...' }</style>");
 
       // Clearing and Hiding the Discount Code Fields
       jQuery('#pmpro_level_cost p:first-of-type, #other_discount_code_p, .pmpro_payment-discount-code').hide();

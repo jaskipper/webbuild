@@ -3,9 +3,8 @@
   position: relative;
 }
 .replace-pmpro-message:after {
-  background-color: #ff7152;
-  border-color: #222;
-  color: #ffffff;
+  background-color: rgba(255, 113, 82, 0.6);
+  color: #333;
   visibility: visible;
   position: absolute;
   top: 0;
