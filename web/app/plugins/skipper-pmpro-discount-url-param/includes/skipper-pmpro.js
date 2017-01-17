@@ -73,9 +73,8 @@ function showDiscountCodeItems() {
   if (jQuery('body').is('.membership-checkout, .pmpro-level')) {
 
     if ( Cookies.get('discount') ) {
-      jQuery('#pmpro_message').addClass('replace-pmpro-message');
-
       // If this was successful, let's add our own message to #pmpro_message
+      jQuery('#pmpro_message').removeClass('pmpro_success');
       jQuery('#pmpro_message').addClass('replace-pmpro-message');
 
       // Replacing the default message with one explaining how long we have left
@@ -99,7 +98,7 @@ function showDiscountCodeItems() {
       initializeClock('clockdiv', deadline);
 
     }
-    
+
   }
 }
 

@@ -271,7 +271,7 @@ form.pmpro_form {
   .pmpro_asterisk abbr {
     border-bottom: none !important;
     text-decoration: none !important;
-    color: #48c08c;
+    color: $brand-danger;
   }
   select {
     max-width: none;

@@ -3,16 +3,16 @@
   position: relative;
 }
 .replace-pmpro-message:after {
+  background-color: #ff7152;
+  border-color: #222;
+  color: #ffffff;
   visibility: visible;
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #d9edf7;
-  border: 1px solid #bce8f1;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  color: #31708f;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5em;
@@ -47,7 +47,7 @@
 #clockdiv > div{
 	padding: 10px;
 	border-radius: 3px;
-	background: #00BF96;
+	background: #444444;
 	display: inline-block;
   margin-bottom: 0;
 }
@@ -55,7 +55,7 @@
 #clockdiv div > span{
 	padding: 15px;
 	border-radius: 3px;
-	background: #00816A;
+	background: #333333;
 	display: inline-block;
   width: 70px;
 }
