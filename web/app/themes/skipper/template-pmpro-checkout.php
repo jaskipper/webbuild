@@ -42,7 +42,7 @@
 	<?php
 		}
 	?>
-  
+
   <div id="clockdiv">
     <div>
       <span class="days"></span>
@@ -844,10 +844,9 @@
 -->
 </script>
 <script>
-<!--
+
 //add javascriptok hidden field to checkout
 jQuery("input[name=submit-checkout]").after('<input type="hidden" name="javascriptok" value="1" />');
--->
 
 // checkout
 jQuery('#pmpro_payment_information_fields').addClass('table');
