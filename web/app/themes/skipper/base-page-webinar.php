@@ -58,10 +58,10 @@ use Roots\Sage\Wrapper;
               </p>
 
               <div class="fb-like" data-href="https://www.facebook.com/jasonaskipper1" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-          		<div class="legal">
+          		<!--<div class="legal">
                 <p>Your Information is 100% Secure and Will Never Be Shared With Anyone</p>
           		  <p><a href="#" data-toggle="modal" data-target="#modal0">Support</a> | <a href="#" data-toggle="modal" data-target="#modal1">Privacy</a> | <a href="#" data-toggle="modal" data-target="#modal2">Terms</a></p>
-
+                -->
               </div>
         		</div>
           </div><!-- /.container -->

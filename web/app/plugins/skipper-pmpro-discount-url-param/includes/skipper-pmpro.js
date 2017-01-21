@@ -95,8 +95,10 @@ function showDiscountCodeItems() {
 
       //var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
       var deadline = new Date( Date.parse( Cookies.get( 'discountexpires' ) ) );
-      initializeClock('clockdiv', deadline);
-
+      if ( initializeClock('clockdiv', deadline) ) {
+        initializeClock('clockdiv', deadline);
+      }
+      
     }
 
   }
