@@ -74,28 +74,38 @@ function showDiscountCodeItems() {
 
     if ( Cookies.get('discount') ) {
       // If this was successful, let's add our own message to #pmpro_message
-      jQuery('#pmpro_message').removeClass('pmpro_success');
-      jQuery('#pmpro_message').addClass('replace-pmpro-message');
+      //jQuery('#pmpro_message').removeClass('pmpro_success');
+      //jQuery('#pmpro_message').addClass('replace-pmpro-message');
 
       // Replacing the default message with one explaining how long we have left
-      jQuery('head').append("<style>.replace-pmpro-message:after{ content:'Your discount has been applied! - NOTE: This Offer Expires In...' }</style>");
+      //jQuery('head').append("<style>.replace-pmpro-message:after{ content:'Your discount has been applied! - NOTE: This Offer Expires In...' }</style>");
 
       // Clearing and Hiding the Discount Code Fields
       jQuery('#pmpro_level_cost p:first-of-type, #other_discount_code_p, .pmpro_payment-discount-code').hide();
 
       // Add a clear button after
-      jQuery("#pmpro_level_cost").after('<button type="button" class="btn btn-primary cleardiscount">Clear Discount</button>');
+      jQuery("#pmpro_level_cost").after('<button type="button" class="btn btn-primary cleardiscount">Clear Code</button>');
 
       jQuery('.cleardiscount').click(function() {
           Cookies.remove('discount');
           Cookies.remove('discountexpires');
           location.reload();
       });
-      jQuery("#clockdiv").show();
+
+      if ( (Cookies.get('discount') == 'intro7day') ) {
+        jQuery("#pmpro_level_cost").after(''+
+        '<div id="paymentsplit" class="form-check" style="margin: 0 0 .75rem;">' +
+          '<label class="form-check-label" style="font-weight: normal; font-size: 14px;">' +
+            '<input class="form-check-input" type="checkbox" value="" style="position: absolute" onclick=\'window.location.assign("https://webbuild.dev/membership-account/membership-checkout/?level=1&disc=intro7day2")\'>' +
+            'Split into two payments of $249.00 after the 7 day trial period' +
+          '</label>' +
+        '</div>');
+      }
+      //jQuery("#clockdiv").show();
 
       //var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-      var deadline = new Date( Date.parse( Cookies.get( 'discountexpires' ) ) );
-      initializeClock('clockdiv', deadline);
+      //var deadline = new Date( Date.parse( Cookies.get( 'discountexpires' ) ) );
+      //initializeClock('clockdiv', deadline);
     }
 
   }
@@ -114,20 +124,15 @@ jQuery(function($) {
   $(document).ready(function(){
 
     if ($('body').is('.membership-checkout, .pmpro-level')) {
+      jQuery("#paymentsplit").hide();
       if ( urlParam('disc') ) {
         // Get the URL Parameter disc
         var disc = urlParam('disc');
         removeUrlParam('disc');
-        var inFourHours = new Date(Date.now() + 60 * 60 * 1000 * 4);
-        var inTwoDays = new Date(Date.now() + 60 * 60 * 1000 * 24 * 2);
-        if ( disc === "7EE5764A5E" ) {
-          // Requires the js-cookie plugin
-          Cookies.set('discount', disc, { expires: inTwoDays });
-          Cookies.set('discountexpires', inTwoDays, { expires: inTwoDays });
-        } else {
-          Cookies.set('discount', disc, { expires: inFourHours });
-          Cookies.set('discountexpires', inFourHours, { expires: inFourHours });
-        }
+        //var inFourHours = new Date(Date.now() + 60 * 60 * 1000 * 4);
+        //var inTwoDays = new Date(Date.now() + 60 * 60 * 1000 * 24 * 2);
+        Cookies.set('discount', disc);
+          //Cookies.set('discountexpires', inTwoDays, { expires: inTwoDays });
       }
       if ( Cookies.get('discount') ) {
           var discount = Cookies.get('discount');

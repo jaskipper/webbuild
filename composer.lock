@@ -507,15 +507,15 @@
         },
         {
             "name": "wpackagist-plugin/paid-memberships-pro",
-            "version": "1.8.13.1",
+            "version": "1.8.13.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/paid-memberships-pro/",
-                "reference": "tags/1.8.13.1"
+                "reference": "tags/1.8.13.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/paid-memberships-pro.1.8.13.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/paid-memberships-pro.1.8.13.3.zip",
                 "reference": null,
                 "shasum": null
             },

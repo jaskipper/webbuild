@@ -43,7 +43,7 @@
 		}
 	?>
 
-  <div id="clockdiv">
+  <!--<div id="clockdiv">
     <div>
       <span class="days"></span>
       <div class="smalltext">Days</div>
@@ -60,26 +60,19 @@
       <span class="seconds"></span>
       <div class="smalltext">Seconds</div>
     </div>
-  </div>
+  </div>-->
 
 	<?php if($pmpro_review) { ?>
 		<p><?php _e('Almost done. Review the membership information and pricing below then <strong>click the "Complete Payment" button</strong> to finish your order.', 'pmpro');?></p>
 	<?php } ?>
+  <h2>Membership Checkout - WebBuild</h2>
 
 	<table id="pmpro_pricing_fields" class="pmpro_checkout" width="100%" cellpadding="0" cellspacing="0" border="0">
-	<thead>
-		<tr>
-			<th>
-				<span class="pmpro_thead-name"><?php _e('Membership Level', 'pmpro');?></span>
-				<?php if(count($pmpro_levels) > 1) { ?><span class="pmpro_thead-msg"><a href="<?php echo pmpro_url("levels"); ?>"><?php _e('change', 'pmpro');?></a></span><?php } ?>
-			</th>
-		</tr>
-	</thead>
 	<tbody>
 		<tr>
 			<td>
 				<p>
-					<?php printf(__('You have selected the <strong>%s</strong> membership level.', 'pmpro'), $pmpro_level->name);?>
+					<?php printf(__('<h4>%s</h4>', 'pmpro'), $pmpro_level->name);?>
 				</p>
 
 				<?php
@@ -100,6 +93,7 @@
 					<?php } ?>
 					<?php echo wpautop(pmpro_getLevelCost($pmpro_level)); ?>
 					<?php echo wpautop(pmpro_getLevelExpiration($pmpro_level)); ?>
+
 				</div>
 
 				<?php do_action("pmpro_checkout_after_level_cost"); ?>
