@@ -96,7 +96,7 @@ function showDiscountCodeItems() {
         jQuery("#pmpro_level_cost").after(''+
         '<div id="paymentsplit" class="form-check" style="margin: 0 0 .75rem;">' +
           '<label class="form-check-label" style="font-weight: normal; font-size: 14px;">' +
-            '<input class="form-check-input" type="checkbox" value="" style="position: absolute" onclick=\'window.location.assign("https://webbuild.dev/membership-account/membership-checkout/?level=1&disc=intro7day2")\'>' +
+            '<input class="form-check-input" type="checkbox" value="" style="position: absolute" onclick=\'window.location.assign("/membership-account/membership-checkout/?level=1&disc=intro7day2")\'>' +
             'Split into two payments of $249.00 after the 7 day trial period' +
           '</label>' +
         '</div>');
