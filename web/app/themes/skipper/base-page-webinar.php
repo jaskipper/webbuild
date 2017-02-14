@@ -48,7 +48,7 @@ use Roots\Sage\Wrapper;
                 <link href="//app.webinarjam.net/assets/css/register_button.css" rel="stylesheet">
                 <div style="margin:auto;width:300px;">
                   <div class="embedded-joinwebinar-button">
-                    <button id="reserve" type="button" class="btn btn-danger btn-xlg" title="regpopbox_32182_6bdc640dbd">
+                    <button id="reserve" type="button" class="btn btn-danger btn-xlg" title="regpopbox_32182_e2a24e67c7">
                       <span>Claim Your Spot Now!</span>
                     </button>
                   </div>
