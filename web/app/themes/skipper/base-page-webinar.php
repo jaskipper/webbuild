@@ -8,6 +8,97 @@ use Roots\Sage\Wrapper;
 <!doctype html>
 <html <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
+  <style>
+    @media (max-width: 575px) {
+      .webinar .wrap-wrap, .webinar .wrap .content {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .webinar #mycontent .main  {
+        border-radius: 0 !important;
+      }
+    }
+    .webinar {
+      background-color: #444;
+    }
+    #webinarvideolanding {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+    }
+    div#webinarvideolanding {
+      background-size: cover;
+    }
+    .webinar #mycontent, .webinar #mycontent .content {
+      background-color: transparent;
+    }
+    .webinar #mycontent .main {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
+    }
+    .webinar h1 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: #222;
+      text-shadow: 0 0 2px rgba(0, 0, 0, .25);
+    }
+    .webinar h1 span {
+      color: #666;
+    }
+    .webinar h5 {
+      color: #444;
+    }
+    .webinar .btn {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
+    }
+    .webinar .videoWrapper {
+      margin-bottom: 20px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
+    }
+    .webinar .innerwrapper {
+
+    }
+    .webinar .titles {
+      font-weight: bold;
+      font-size: 18px;
+      color: #4491b6;
+      clear: both;
+    }
+    .text-center {
+      text-align: center;
+    }
+    video#bgvid {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background: url(polina.jpg) no-repeat;
+        background-size: cover;
+    }
+    .webinar .fbimg {
+      width: 80px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .webinar #skipperimg {
+      width: 80px;
+      float: left;
+      padding: 10px 10px 10px 0;
+    }
+    .webinar .reviews {
+      margin-left: 20px;
+    }
+  </style>
   <body <?php body_class(); ?>>
     <script>
       window.fbAsyncInit = function() {
@@ -35,45 +126,90 @@ use Roots\Sage\Wrapper;
     <?php
       do_action('get_header');
       //get_template_part('templates/header');
-
     ?>
+    <div id="webinarvideolanding" style="background: url('https://webbuild.io/app/uploads/2017/02/unsplash_52d5b2dfdf619_1.jpg'); background-size: cover;">
+      <!--<video id="bgvid" autoplay loop class="fillWidth">
+          <source src="https://webbuild.io/app/uploads/2017/02/Dots-5244.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+      </video>-->
+    </div>
 
-        <div class="container">
-      		<div class="row">
-        		<div class="col-md-7 webinarinvite">
-              <h3>FREE TRAINING SESSION:</h3>
-          		<h4>The Ultimate Church Web Strategy Webinar. "How To Build an Effective Online Presence... Without Breaking The Budget!”</h4>
-          		<h5>Next Class: <span style="color:#d31717">TODAY</span></h5>
-          		<p>
-                <link href="//app.webinarjam.net/assets/css/register_button.css" rel="stylesheet">
-                <div style="margin:auto;width:300px;">
-                  <div class="embedded-joinwebinar-button">
-                    <button id="reserve" type="button" class="btn btn-danger btn-xlg" title="regpopbox_32182_e2a24e67c7">
-                      <span>Claim Your Spot Now!</span>
-                    </button>
+    <div id="mycontent" class="wrap-wrap">
+      <div class="wrap container" role="document">
+        <div class="content row flex-items-xs-center">
+          <main class="main">
+            <h1>FREE WEBINAR: <span>How To Build An Effective Online Presence For Your Ministry... Without Breaking The Budget!<span></h1>
+              <div class="videoWrapper"><iframe src="https://player.vimeo.com/video/204556650?autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              </div>
+                <div class="row text-center">
+                  <div class="col-xs-12 mb-2">
+                      <div class="embedded-joinwebinar-button">
+                        <button id="reserve" type="button" class="btn btn-success btn-xlg hvr-grow" title="regpopbox_32182_51ad4507c4">
+                          <span>Save My Seat!</span>
+                        </button>
+                      </div>
+                    <script src="//app.webinarjam.net/assets/js/porthole.min.js" language="javascript" type="text/javascript" async></script>
+                    <script src="//app.webinarjam.net/register.evergreen.extra.js" language="javascript" type="text/javascript" async></script>
                   </div>
                 </div>
-                <script src="//app.webinarjam.net/assets/js/porthole.min.js" language="javascript" type="text/javascript" async></script>
-                <script src="//app.webinarjam.net/register.evergreen.extra.js" language="javascript" type="text/javascript" async></script>
-              </p>
+                <div class="row text-center">
+                  <div class="col-xs-12">
+                    <div class="fb-like mb-2" data-href="https://www.facebook.com/jasonaskipper1" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h2>Latest Appreciation</h2>
+                    <blockquote class="blockquote ml-2">
+                      <p class="mb-0">Jason, the training was absolutely fantastic… Your ministry is extremely powerful and God ordained. I will be praying for you.</p>
+                      <footer class="blockquote-footer">Pastor <cite title="Source Title">Victor Chabala</cite><img class="fbimg img-thumbnail" src="https://webbuild.io/app/uploads/2017/02/fbimg1.jpg" class="fbimg" /></footer>
+                    </blockquote>
+                    <blockquote class="blockquote ml-2">
+                      <p class="mb-0">Hey Jason... I thoroughly enjoyed your webinar yesterday! I was able to take five pages of some really great notes that will help us in making some much-needed changes to our social media presence as well as our webpage.</p>
+                      <footer class="blockquote-footer">Pastor <cite title="Source Title">Steve Kahn</cite><img class="fbimg img-thumbnail" src="https://webbuild.io/app/uploads/2017/02/Screen-Shot-2017-02-17-at-12.00.45-PM.jpg" class="fbimg" /></footer>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                      <h2>About the Speaker: Jason Skipper</h2>
+                      <div class="pl-2 pr-2">
+                        <img id="skipperimg" src="https://s3.amazonaws.com/webinarjam/images-users/presenters/wYjcPGwiMm8RmyNX2QVG.jpg" alt="Jason Skipper" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Jason Skipper">
 
-              <div class="fb-like" data-href="https://www.facebook.com/jasonaskipper1" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-          		<!--<div class="legal">
-                <p>Your Information is 100% Secure and Will Never Be Shared With Anyone</p>
-          		  <p><a href="#" data-toggle="modal" data-target="#modal0">Support</a> | <a href="#" data-toggle="modal" data-target="#modal1">Privacy</a> | <a href="#" data-toggle="modal" data-target="#modal2">Terms</a></p>
-                -->
-              </div>
-        		</div>
-          </div><!-- /.container -->
-        </div>
+                        <p>Having been missionaries in Bolivia for 15 years and planted two tremendously successful churches there, Jason and his family now live in Nashville, Tennessee where they are in the process of planting another world changing church through the Association of Related Churches (ARC).</p>
 
-        <div class="webinarback">
-          <img src="<?php echo get_template_directory_uri() ?>/dist/images/JasonWhtPicSm.jpg">
-        </div>
-
+                        <p>Jason has two passions in life outside of God and family:
+                        <ol>
+                          <li>Reaching the lost for Jesus Christ, and...</li>
+                          <li>Technology.</li>
+                        </ol></p>
+                        <p>He is passionate about helping and teaching others to do #1 through #2, using technology as an amazing and powerful tool to reach and make an impact in the world for Jesus. Jason is also an "Apple" Certified Trainer &amp; Technician.</p>
+                      </div>
+                    <div class="text-center">
+                      <div class="embedded-joinwebinar-button">
+                        <button id="reserve" type="button" class="btn btn-success btn-xlg hvr-grow" title="regpopbox_32182_51ad4507c4">
+                          <span>Save My Seat!</span>
+                        </button>
+                      </div>
+                    </div>
+                    <script src="//app.webinarjam.net/assets/js/porthole.min.js" language="javascript" type="text/javascript" async></script>
+                    <script src="//app.webinarjam.net/register.evergreen.extra.js" language="javascript" type="text/javascript" async></script>
+                  </div>
+                </div>
+            <div class="innerwrapper">
+              <?php include Wrapper\template_path(); ?>
+            </div>
+          </main><!-- /.main -->
+          <?php if (Setup\display_sidebar()) : ?>
+            <aside class="sidebar">
+              <?php include Wrapper\sidebar_path(); ?>
+            </aside><!-- /.sidebar -->
+          <?php endif; ?>
+        </div><!-- /.content -->
+      </div><!-- /.wrap -->
+    </div>
     <?php
       do_action('get_footer');
-      get_template_part('templates/footer');
+      //get_template_part('templates/footer');
       wp_footer();
     ?>
   </body>

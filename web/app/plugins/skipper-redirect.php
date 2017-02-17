@@ -14,7 +14,7 @@ function my_template_redirect()
 {
   if ( is_user_logged_in() ) {
     the_content();
-  } else if ( !is_user_logged_in() && is_page( array( 'register', 'membership-checkout', 'membership-invoice', 'membership-confirmation', 'webinar' )  ) ) {
+  } else if ( !is_user_logged_in() && is_page( array( 'register', 'membership-checkout', 'membership-invoice', 'membership-confirmation', 'webinar', 'webinarvideo' )  ) ) {
     the_content();
   } else {
     header('Location: ' . wp_login_url());
