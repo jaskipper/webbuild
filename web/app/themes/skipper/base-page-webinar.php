@@ -8,97 +8,6 @@ use Roots\Sage\Wrapper;
 <!doctype html>
 <html <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
-  <style>
-    @media (max-width: 575px) {
-      .webinar .wrap-wrap, .webinar .wrap .content {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-      .webinar #mycontent .main  {
-        border-radius: 0 !important;
-      }
-    }
-    .webinar {
-      background-color: #444;
-    }
-    #webinarvideolanding {
-      width: 100%;
-      height: 100vh;
-      position: fixed;
-    }
-    div#webinarvideolanding {
-      background-size: cover;
-    }
-    .webinar #mycontent, .webinar #mycontent .content {
-      background-color: transparent;
-    }
-    .webinar #mycontent .main {
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
-    }
-    .webinar h1 {
-      font-size: 1.6rem;
-      margin-bottom: 15px;
-      color: #222;
-      text-shadow: 0 0 2px rgba(0, 0, 0, .25);
-    }
-    .webinar h1 span {
-      color: #666;
-    }
-    .webinar h5 {
-      color: #444;
-    }
-    .webinar .btn {
-      box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
-    }
-    .webinar .videoWrapper {
-      margin-bottom: 20px;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
-    }
-    .webinar .innerwrapper {
-
-    }
-    .webinar .titles {
-      font-weight: bold;
-      font-size: 18px;
-      color: #4491b6;
-      clear: both;
-    }
-    .text-center {
-      text-align: center;
-    }
-    video#bgvid {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -100;
-        -ms-transform: translateX(-50%) translateY(-50%);
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-        background: url(polina.jpg) no-repeat;
-        background-size: cover;
-    }
-    .webinar .fbimg {
-      width: 80px;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-    .webinar #skipperimg {
-      width: 80px;
-      float: left;
-      padding: 10px 10px 10px 0;
-    }
-    .webinar .reviews {
-      margin-left: 20px;
-    }
-  </style>
   <body <?php body_class(); ?>>
     <script>
       window.fbAsyncInit = function() {
@@ -144,7 +53,7 @@ use Roots\Sage\Wrapper;
                   <div class="col-xs-12 mb-2">
                       <div class="embedded-joinwebinar-button">
                         <button id="reserve" type="button" class="btn btn-success btn-xlg hvr-grow" title="regpopbox_32182_51ad4507c4">
-                          <span>Save My Seat!</span>
+                          Save My Seat!
                         </button>
                       </div>
                     <script src="//app.webinarjam.net/assets/js/porthole.min.js" language="javascript" type="text/javascript" async></script>
@@ -187,7 +96,7 @@ use Roots\Sage\Wrapper;
                     <div class="text-center">
                       <div class="embedded-joinwebinar-button">
                         <button id="reserve" type="button" class="btn btn-success btn-xlg hvr-grow" title="regpopbox_32182_51ad4507c4">
-                          <span>Save My Seat!</span>
+                          Save My Seat!
                         </button>
                       </div>
                     </div>

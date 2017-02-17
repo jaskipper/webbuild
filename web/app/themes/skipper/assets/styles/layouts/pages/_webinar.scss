@@ -1,96 +1,93 @@
+@media (max-width: 575px) {
+  .webinar .wrap-wrap, .webinar .wrap .content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .webinar #mycontent .main  {
+    border-radius: 0 !important;
+  }
+}
 .webinar {
-  .fb-like {
-
-  }
-  footer {
-    display: none;
-  }
-  a {
-    color: $gray-light;
-  }
-  .webinarinvite {
-    text-shadow: 1px 1px 15px rgba(150, 150, 150, 1);
-    margin-top: 60px;
-    text-align: center;
-    h3 {
-      font-family: 'Cabin Condensed', sans-serif;
-      font-size: 2.4rem;
-      color: $gray-darker;
-      @media (min-width: 1200px) {
-        font-size: 3vw;
-      }
-    }
-    h4 {
-      font-family: 'Cabin Condensed', sans-serif;
-      font-size: 2rem;
-      color: $gray-dark;
-      @media (min-width: 1200px) {
-        font-size: 2.8vw;
-      }
-    }
-    h5 {
-      font-family: 'Cabin Condensed', sans-serif;
-      font-size: 1.8rem;
-      color: $gray-darker;
-      padding-top: 15px;
-      @media (min-width: 1200px) {
-        font-size: 2.5vw;
-      }
-    }
-    button {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      background-color: #ff7152;
-      -webkit-transition: all .4s; /* Safari */
-      transition: all .6s;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: darken(#ff7152, 10%);
-    }
-    .legal {
-      margin-top: 2rem;
-      font-size: .8rem;
-      p {
-        margin-bottom: 0;
-      }
-    }
-  }
-  .modal {
-    font-size: 85% !important;
-  }
+  background-color: #444;
 }
-.webinarback {
+#webinarvideolanding {
   width: 100%;
-  img {
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    right: -15%;
-    max-height: 110%;
-    @media (max-width: 767px) {
-      position: relative;
-      width: 100%;
-      max-height: none;
-      right: auto;
-      left: -12%;
-    }
-    @media (max-width: 940px) and (min-width: 768px) {
-      right: -25%;
-    }
-    @media (min-width: 1200px) {
-      right: -5%;
-    }
-  }
+  height: 100vh;
+  position: fixed;
 }
-.btn-xlg {
+div#webinarvideolanding {
+  background-size: cover;
+}
+.webinar #mycontent, .webinar #mycontent .content {
+  background-color: transparent;
+}
+.webinar #mycontent .main {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
+}
+.webinar h1 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #222;
+  text-shadow: 0 0 2px rgba(0, 0, 0, .25);
+}
+.webinar h1 span {
+  color: #666;
+}
+.webinar h5 {
+  color: #444;
+}
+.webinar .btn {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
+}
+.webinar .videoWrapper {
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
+}
+.webinar .innerwrapper {
+
+}
+.webinar .titles {
+  font-weight: bold;
+  font-size: 18px;
+  color: #4491b6;
+  clear: both;
+}
+.text-center {
+  text-align: center;
+}
+video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+}
+.webinar .fbimg {
+  width: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.webinar #skipperimg {
+  width: 80px;
+  float: left;
+  padding: 10px 10px 10px 0;
+}
+.webinar .reviews {
+  margin-left: 20px;
+}
+.webinar .btn-xlg {
   padding: 1rem 1.75rem;
   font-size: 1.5rem;
-  border-radius: .3rem
-}
-.modal-backdrop.in {
-  opacity: .8;
-}
-.register #nav-below {
-  display: none;
 }
